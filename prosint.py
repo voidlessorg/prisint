@@ -373,9 +373,9 @@ def render_menu() -> None:
     console.print(Align.center(table))
 
 def run_spinner(duration: float = 0.8, message: str = "Processing cyber engine lookup...") -> None:
-    with Live(Progress(SpinnerColumn(spinner_name="cyborg"), TextColumn("[bold yellow]{task.description}"))):
+    # تغییر نام اسپینر به 'dots' برای سازگاری کامل با تمام نسخه‌های Rich در ترموکس
+    with Live(Progress(SpinnerColumn(spinner_name="dots"), TextColumn("[bold yellow]{task.description}"))):
         time.sleep(duration)
-
 # ==============================================================================
 # SUB-MODULES MODULE CORE IMPLEMENTATION
 # ==============================================================================
